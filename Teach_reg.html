@@ -1,0 +1,48 @@
+<html>
+<head>
+        <style>
+    input[type=submit],input[type=reset]{
+    background-color: #cc0000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+        input[type=text], input[type=password],input[type=number],input[type=email] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+<h1>Tournament creator Registration</h1>
+<form name="TR" method="post" action="Teach_check.php">
+Username<br><input type="text" name="tus" required><br><br>
+Password<br><input type="password" name="tpass" required><br><br>
+First name<br><input type="text" name="tfname" required><br><br>
+Middle name<br><input type="text" name="tmname"><br><br>
+Last name<br><input type="text" name="tlname" required><br><br>
+Phone Number<br><input type="number"  step="1" name="pno" required><br><br>
+Email<br><input type="email" name="em" required><br><br>
+State<br><input type="text" name="state" required><br><br>
+City<br><input type="text" name="city" required><br><br>
+Gender:<br><input type="radio" name="tgender" value="M">Male
+    <input type="radio" name="tgender" value="F">Female<br><br>
+Date of Birth<br><input type="date" name="dob" required><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Tcreator Login</title>
+    <style>
+    #check
+        {
+            color:red;
+        }
+    input[type=submit],input[type=reset]{
+    background-color: #cc0000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+
+        input[type=text], input[type=password] {
+    width: 20%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+    <h1>Tournament creator Login</h1>
+    <form name="TL" method="post" action="Teach_log_check.php">
+        <small id="check"></small><br>
+        Username <input type="text" name="tuser" onblur="autov()" required><br><br>
+        Password <input type="password" name="tpass" required><br><br>
+        <input type="submit" value="Enter">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        function autov()
+        {
+            var x=document.forms["TL"]["tuser"].value;
+            if(x.length<3)
+                document.getElementById("check").innerHTML="Username too small";
+            else if(x.length>16)
+                document.getElementById("check").innerHTML="Username too long";
+            else
+                document.getElementById("check").innerHTML="";
+        }
+        
+    
+    </script>
+    </body>
+</html>

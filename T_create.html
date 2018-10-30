@@ -1,0 +1,58 @@
+<html>
+<head>
+            <style>
+    input[type=submit],input[type=reset]{
+    background-color: #cc0000;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+        input[type=text], input[type=password],input[type=number] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+</style>
+</head>
+<body>
+<h1>Tournament Creation</h1>
+<form name="TC" method="post" action="Tour_inserter.php">
+Name of Tournament<br><input type="text" name="tname" required><br><br>
+Sport:
+<select name="tsport">
+    <option value="Football">Football</option>
+    <option value="Cricket">Cricket</option>
+    <option value="Volleyball">Volleyball</option>
+    <option value="Basketball">Basketball</option>
+</select>
+<br><br>    
+Location of Tournament(City)<br><input type="text" name="city" required><br><br>
+Location of Tournament(Address)<br><textarea cols=40 rows=5 name="Address" required></textarea><br><br>
+Number of teams<br><input type="number" name="no" required><br><br>
+Registrations Start date<br><input type="date" name="rsdate" required><br><br>
+Registrations End date<br><input type="date" name="redate" required><br><br>
+Tournament start date<br><input type="date" name="tsdate" required><br><br>
+Tournament end date<br><input type="date" name="tedate" required><br><br>
+Gender:
+<select name="Gender">
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+</select>
+<br><br>
+<input type="submit" value="Enter">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>

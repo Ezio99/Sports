@@ -1,0 +1,88 @@
+<html>
+<head>
+</head>
+        <style>
+    input[type=submit],input[type=reset]{
+    background-color: #6666ff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+        
+        input[type=text], input[type=password],input[type=number],input[type=email] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+</style>
+<body>
+<h1>Student Registration</h1>
+<form name="SR" method="post" action="sr_check.php" onsubmit="validate()">
+Username<br><input type="text" name="sus" required><br><br>
+Password<br><input type="password" name="spass" required><br><br>
+First name<br><input type="text" name="sfname" required><br><br>
+Middle name<br><input type="text" name="smname"><br><br>
+Last name<br><input type="text" name="slname" required><br><br>                         
+Phone Number<br><input type="number"  step="1" name="pno" required><br><br>
+Email<br><input type="email" name="em" required><br><br>
+State<br><input type="text" name="state" required><br><br>
+City<br><input type="text" name="city" required><br><br>
+Pin<br><input type="number" step="1" name="pin" required><br><br>
+Select Sports:<br>
+    <input  id="FH" type="hidden" name="F" value=0>
+    <input  id="F" type="checkbox" name="F" value="Football">Football<br><br>
+    <input  id="CH" type="hidden"  name="C" value=0>
+    <input  id="C" type="checkbox" name="C" value="Cricket">Cricket<br><br>
+    <input  id="VH" type="hidden"  name="V" value=0>
+    <input  id="V" type="checkbox" name="V" value="Volleyball">Volleyball<br><br>
+    <input  id="BBH" type="hidden"  name="BB" value=0>
+    <input id="BB" type="checkbox" name="BB" value="Basketball">Basketball<br><br>
+Date of Birth<br><input type="date" name="dob" required><br><br>
+Gender<br><input type="radio" name="sgender" value="M">Male
+    <input type="radio" name="sgender" value="F">Female<br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+<script>
+    var x;
+    x=document.getElementById("F").checked;
+    if(x)
+        document.getElementById("FH").disabled= true;
+    x=document.getElementById("C").checked;
+    if(x)
+        document.getElementById("CH").disabled= true;
+    x=document.getElementById("V").checked;
+    if(x)
+        document.getElementById("VH").disabled= true;
+    x=document.getElementById("BB").checked;
+    if(x)
+        document.getElementById("BBH").disabled= true;
+    x=document.getElementById("B").checked;
+    if(x)
+        document.getElementById("BH").disabled= true;
+    function validate()
+    {
+        patus=/^\.{5,12}$/;
+        if(!(document.forms["SR"]["sus"].match(patus))
+           {
+                alert("Username length must be between 5 to 12 characters");
+           }
+    }
+    
+</script>
+
+
+</body>
+</html>

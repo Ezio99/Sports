@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Student Login</title>
+    <style>
+    #check
+        {
+            color:red;
+        }
+               
+    input[type=submit],input[type=reset]{
+    background-color: #009999;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+
+        input[type=text], input[type=password] {
+    width: 20%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+    </style>
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <form name="SL" method="post" action="adm_login_check.php">
+        <small id="check"></small><br>
+        Username <input type="text" name="suser" required><br><br>
+        Password <input type="password" name="spass" required><br><br>
+        <input type="submit" value="Login">
+        <input type="reset" value="Reset">
+    </form>
+    </body>
+</html>

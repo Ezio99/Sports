@@ -1,0 +1,39 @@
+<html>
+    <style>
+        
+            input[type=submit],input[type=reset]{
+    background-color: #6666ff;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
+}
+
+input[type=submit],input[type=reset]:hover {
+    opacity: 1;
+}
+            input[type=text], input[type=password],input[type=number] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+    
+    
+    
+    </style>
+<body>
+<h4>Only captain of the team can send requests</h4>
+<form name="SR" method="POST" action="S_sentereq.php">
+Enter Username of player <input name="user" type="text" required><br><br>
+Enter Team name <input name="tn" type="text" required><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
